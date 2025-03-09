@@ -1,8 +1,8 @@
 # Site settings
-title:                Choi Yeonhee's Blog
-description:          "Hydejack theme-based GitHub blog"
-lang:                 en
-tagline:              "Change `tagline` in `_config.yml`"
+title:                cyh Blog
+description:          개발 공부
+lang:                 ko
+tagline:              개발 공부중,,
 keywords:             []
 
 # GitHub Pages settings
