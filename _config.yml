@@ -14,7 +14,7 @@ baseurl:              ""    #프로젝트 페이지일 경우 입력력
 remote_theme: hydecorp/hydejack@v9
 
 # Sidebar settings
-logo:               "" # /assets/img/logo.png
+logo:                 /assets/img/logo.png
 accent_image:         /assets/img/sidebar-bg.jpg
 accent_color:         rgb(79,177,186)
 theme_color:          rgb(25,55,71)
