@@ -7,13 +7,14 @@ keywords:             []
 
 # GitHub Pages settings
 url:                  "https://choiyeonhee1.github.io"
-baseurl:              ""
+baseurl:              ""    #프로젝트 페이지일 경우 입력력
 
-# Remote theme
+
+# Remote theme (원격 테마)
 remote_theme: hydecorp/hydejack@v9
 
 # Sidebar settings
-logo:                 /assets/img/logo.png
+logo:               "" # /assets/img/logo.png
 accent_image:         /assets/img/sidebar-bg.jpg
 accent_color:         rgb(79,177,186)
 theme_color:          rgb(25,55,71)
@@ -30,7 +31,7 @@ menu:
     url:              /about/
 
 
-# Footer links
+# Footer links (푸터 삭제함)
 legal:
   - title:            LICENSE
     url:              /LICENSE/
@@ -39,7 +40,7 @@ legal:
   - title:            CHANGELOG
     url:              /CHANGELOG/
 
-# Permalinks
+# Permalinks (게시글 url 형식식)
 permalink:            /:categories/:year-:month-:day-:title/
 paginate:             10
 paginate_path:        /page:num/
@@ -70,10 +71,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-include-cache
 
-# SEO & Social
+# SEO & Social (검색 엔진 등록)
 webmaster_verifications:
   google:             "<your-google-verification-code>"
 
-
+#footer 삭제
 hydejack:
   no_footer_links: true
