@@ -56,6 +56,7 @@ hydejack:
     always:           false
     dynamic:          true
     icon:             true
+    no_footer_links:  true            #footer 삭제
 
 # Collections
 collections:
@@ -74,7 +75,3 @@ plugins:
 # SEO & Social (검색 엔진 등록)
 webmaster_verifications:
   google:             "<your-google-verification-code>"
-
-#footer 삭제
-hydejack:
-  no_footer_links: true
