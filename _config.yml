@@ -29,14 +29,15 @@ menu:
   - title:            About
     url:              /about/
 
+
 # Footer links
-legal:
-  - title:            LICENSE
-    url:              /LICENSE/
-  - title:            NOTICE
-    url:              /NOTICE/
-  - title:            CHANGELOG
-    url:              /CHANGELOG/
+#legal:
+  #- title:            LICENSE
+  #  url:              /LICENSE/
+  #- title:            NOTICE
+  #  url:              /NOTICE/
+  #- title:            CHANGELOG
+  #  url:              /CHANGELOG/
 
 # Permalinks
 permalink:            /:categories/:year-:month-:day-:title/
