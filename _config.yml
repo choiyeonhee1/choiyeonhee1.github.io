@@ -15,7 +15,7 @@ remote_theme: hydecorp/hydejack@v9
 
 # Sidebar settings
 logo:                 /assets/img/cyh blog logo.png
-accent_image:         /assets/img/sidebar-bg.jpg
+accent_image:         /assets/img/sidebar.png
 accent_color:         rgb(79,177,186)
 theme_color:          rgb(25,55,71)
 
