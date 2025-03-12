@@ -6,8 +6,8 @@ tagline:              ""
 keywords:             []
 
 # GitHub Pages settings
-url:                  "https://choiyeonhee1.github.io"
-baseurl:              "/cyh.github.io"
+url:                  "https://cyh.github.io"
+baseurl:              ""
 
 # Remote theme
 remote_theme: hydecorp/hydejack@v9
