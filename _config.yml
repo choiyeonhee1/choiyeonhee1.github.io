@@ -31,14 +31,7 @@ menu:
     url:              /about/
 
 
-# Footer links (푸터 삭제함)
-legal:
-  - title:            LICENSE
-    url:              /LICENSE/
-  - title:            NOTICE
-    url:              /NOTICE/
-  - title:            CHANGELOG
-    url:              /CHANGELOG/
+
 
 # Permalinks (게시글 url 형식식)
 permalink:            /:categories/:year-:month-:day-:title/
