@@ -44,6 +44,8 @@
   }
 }
 
+*/
+
 #stars {
   display:none;
   position:fixed;
@@ -57,5 +59,3 @@
 @include mq(desktop){
   #stars { display:block; }
 }
-
-*/
