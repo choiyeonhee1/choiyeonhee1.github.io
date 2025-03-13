@@ -143,8 +143,9 @@
     transform:scale(.9);
   }
 }
-
+/*내비게이션 리스트 앞부분*/
 .nav-lh {
+  /*
   &:before {
     content:"";
     position:absolute;
@@ -156,6 +157,7 @@
     height:3rem;
     transition:.3s;
   }
+    */
   &:hover:before {
     width:105%;
     background:gold;
