@@ -44,6 +44,7 @@
 
 .site-tab img { display: none; }
 
+/*검색창*/
 .site-avatar {
   img {
     display:none;
@@ -117,7 +118,7 @@
         }
 
         &:hover{
-          svg { fill:orange; }
+          svg { fill: rgb(245,236,223); }
 
           transform:scale(1.5) translateY(-12.5%);
         }
