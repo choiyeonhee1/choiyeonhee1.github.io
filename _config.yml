@@ -1,70 +1,53 @@
-# Site settings
-title:                cyh Blog
-description:          개발 공부중,,
-lang:                 ko
-tagline:              ""
-keywords:             []
+title: example.com
+description: "Satellite - jekyll blog theme"
+logo_img: "/assets/img/favicon.webp"
+profile_img: "/assets/img/profile.webp"
 
-# GitHub Pages settings
-url:                  "https://choiyeonhee1.github.io"
-baseurl:              ""    #프로젝트 페이지일 경우 입력력
+# Social Links
+email: example@gmail.com
+github_username: github
+twitter_username: twitter
+instagram_username: instagram
+linkedin_username: linkedin
+facebook_username: facebook
 
+# External API
+giscus_repo: "byanko55/jekyll-theme-satellite"
+giscus_repoId: "R_kgDOJ6fqWg"
+giscus_category: "Q&A"
+giscus_categoryId: "DIC_kwDOJ6fqWs4Cc7p7"
+goatcounter_code: byanko77
+google_analytics:
 
-# Remote theme (원격 테마)
-remote_theme: hydecorp/hydejack@v9
+# If your repo name follows the format "<user-name>.github.io", then leave the below blank.
+# Otherwise, set its value as "/<repo-name>". ex) baseurl: /myblog
+baseurl:
 
-# Sidebar settings
-logo:                 /assets/img/cyh blog logo.png
-accent_image:         /assets/img/sidebar.png
-accent_color:         rgb(79,177,186)
-theme_color:          rgb(25,55,71)
-
-# Navigation menu
-menu:
-  - title:            Home
-    url:              /
-  - title:            Example
-    url:              /example/
-  - title:            Documentation
-    url:              /docs/
-  - title:            About
-    url:              /about/
-
-
-
-
-# Permalinks (게시글 url 형식식)
-permalink:            /:categories/:year-:month-:day-:title/
-paginate:             10
-paginate_path:        /page:num/
-
-# Hydejack settings
-hydejack:
-  post_addons:        [about, newsletter, related, random, comments]
-  project_addons:     [about, newsletter, other, comments]
-  no_search:          false
-  no_toc:             false
-  no_large_headings:  false
-  dark_mode:
-    always:           false
-    dynamic:          true
-    icon:             true
-    no_footer_links:  true            #footer 삭제
-
-# Collections
-collections:
-  projects:
-    permalink:        /projects/:path/
-    output:           true
-
-# Plugins
+# Build settings
 plugins:
   - jekyll-feed
-  - jekyll-paginate
-  - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-include-cache
+  - jekyll-seo-tag
+  - jekyll-loading-lazy
 
-# SEO & Social (검색 엔진 등록)
-webmaster_verifications:
-  google:             "<your-google-verification-code>"
+exclude:
+  - docs/
+
+collections:
+  pages:
+    output: true
+    permalink: /:path.html
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      date: "1900-01-01"
+
+# Markdown newline activator 
+kramdown:
+  input: GFM
+  hard_wrap: true
