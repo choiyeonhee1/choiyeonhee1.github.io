@@ -44,7 +44,7 @@
 
 .site-tab img { display: none; }
 
-/*검색창*/
+
 .site-avatar {
   img {
     display:none;
@@ -56,7 +56,7 @@
     transition:.3s;
 
     &:hover {
-      outline:4px solid orange;
+      outline:4px solid rgb(245,236,223);
       outline-offset:8px;
     }
   }
