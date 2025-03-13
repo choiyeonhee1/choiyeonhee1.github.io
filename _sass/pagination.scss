@@ -85,9 +85,9 @@
   }
   .title_post:hover,
   .category:hover {
-    color:$color-rose;
+    color:orange;
   }
-  .category{ color:mediumseagreen !important; }
+  .category{ color:rgb(138,120,96)  }
 
   .txt_post {
     display:-webkit-box;
@@ -168,6 +168,7 @@
 .paginated-item {
   margin:3rem 0;
   height:12.5rem;
+  
 }
 
 #article_content {
@@ -192,10 +193,9 @@
 
   .box_contents {
     width:100%;
-    margin:auto 0 auto -8rem;
+    margin:auto 0 auto -5rem;
     padding:8px 24px;
     background-color:rgba(255,255,255,0.95);
-    background-image:url($baseurl + "/assets/img/tile.png");
     border-radius:6px;
   }
 
@@ -226,19 +226,19 @@
 
 .category-header { font-size:3rem; }
 
-.paginated-item { height:15rem; }
+.paginated-item {  height:10.7rem; }
 
 #article_content {
 
   /* .thumbnail_post { height:15rem; }  */
 
   .box_contents {
-    margin-left:-6rem;
+    margin-left: 0rem;
     border-radius:8px;
   }
 
-  .date { font-size:1.125rem; }
-  .category { font-size:1.25rem; }
+  .date { font-size:0.8rem; }
+  .category { font-size : 0.8rem; }
   .txt_post { margin-top:1.25rem; }
 }
 

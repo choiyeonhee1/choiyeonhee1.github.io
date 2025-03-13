@@ -64,6 +64,10 @@
   img + img { border-radius:50%; }
 }
 
+.myComment{
+  margin-top : 2rem;
+}
+
 .site-tab {
   padding:8px;
   font-size:1rem;
@@ -263,7 +267,7 @@
 
   &:hover {
     mark { 
-      color:$color-rose;
+      color: orange;
       margin-left:40px;
     }
     img { 
