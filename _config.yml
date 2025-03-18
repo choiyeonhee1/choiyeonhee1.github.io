@@ -8,12 +8,13 @@ github_username: github
 
 
 # External API
-giscus_repo: "byanko55/jekyll-theme-satellite"
-giscus_repoId: "R_kgDOJ6fqWg"
+giscus_repo: "choiyeonhee1/choiyeonhee1.github.io"
+giscus_repoId: "R_kgDOOFi4fw"
 giscus_category: "Q&A"
-giscus_categoryId: "DIC_kwDOJ6fqWs4Cc7p7"
-goatcounter_code: byanko77
+giscus_categoryId: "DIC_kwDOOFi4f84CoKTO"
+goatcounter_code: byanko77 #방문자 트래픽 추적용 고유코드
 google_analytics:
+
 
 # If your repo name follows the format "<user-name>.github.io", then leave the below blank.
 # Otherwise, set its value as "/<repo-name>". ex) baseurl: /myblog
