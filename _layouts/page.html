@@ -10,6 +10,7 @@
     {% endif %}
     <head>
         {% include head.html %}
+        <title>{{ page.title | default: site.title }}</title>
         <link rel="preload" href="{{ site.profile_img | prepend: site.baseurl }}" as="image">
         <link rel="stylesheet" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}">
         {% if page_type == "post" %}
