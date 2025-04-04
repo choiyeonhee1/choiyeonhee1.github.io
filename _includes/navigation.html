@@ -8,9 +8,9 @@
         {%- assign p_name = p_tree | last -%}
         {%- assign p_level = p_tree | size -%}
 
-        {% if p.bookmark == nil and p_name != 'index.html' %}
-            {% continue %}
-        {% endif %}
+        {%- if p_name != 'index.html' -%}
+            {%- continue -%}
+        {%- endif -%}
 
         {% if p.bookmark %}
             {% if p_level == 1 %}
