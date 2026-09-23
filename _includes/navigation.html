@@ -62,18 +62,52 @@
                 {%- assign grand_children_list = third_level_pages 
                     | where_exp: "item", "item.url contains child_url" -%}
                 {%- assign num_grand_children = grand_children_list | size -%}
+              <!---  원본 코드(카운트 x)       
                 <li id="nav-second" aria-label="{{ child_title }}">
                     <div class="nav-item">
                         <a href="{{ child_url | prepend: site.baseurl }}" class="nav-list-link nav-sh">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>
                             <span>{{ child_title }}</span>
                         </a>
+                        
                         {%- if num_grand_children > 0 -%}
                         <button class="nav-list-expander" aria-label="toggle items in {{ child_title }} category" aria-pressed="false">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
                         </button>
                         {%- endif -%}
                     </div>
+
+                -->
+                    
+                   <li id="nav-second" aria-label="{{ child_title }}">
+                    <div class="nav-item">
+                        <a href="{{ child_url | prepend: site.baseurl }}" class="nav-list-link nav-sh">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>
+
+                            {%- comment -%}
+                            원본 코드: 카테고리 이름만 표시
+                            <span>{{ child_title }}</span>
+                            {%- endcomment -%}
+
+                            {%- comment -%} 여기에 추가했어: child_url 하위에서 index.html이 아닌(=실제 글) 페이지 개수를 계산 {%- endcomment -%}
+                            {%- assign child_posts = site.pages | where_exp: "item", "item.url contains child_url" -%}
+                            {%- assign child_post_count = 0 -%}
+                            {%- for pg in child_posts -%}
+                                {%- unless pg.url contains 'index.html' -%}
+                                    {%- assign child_post_count = child_post_count | plus: 1 -%}
+                                {%- endunless -%}
+                            {%- endfor -%}
+                            <span>{{ child_title }}{% if child_post_count > 0 %} <span class="nav-count">({{ child_post_count }})</span>{% endif %}</span>
+
+                        </a>
+                        
+                        {%- if num_grand_children > 0 -%}
+                        <button class="nav-list-expander" aria-label="toggle items in {{ child_title }} category" aria-pressed="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
+                        </button>
+                        {%- endif -%}
+                    </div>         
+
                     {%- if num_grand_children > 0 -%}
                         <ul class="nav-list">
                         {%- for grand_child in grand_children_list -%}
