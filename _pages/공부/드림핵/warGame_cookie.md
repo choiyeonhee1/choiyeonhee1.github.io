@@ -14,15 +14,15 @@ admin 계정으로 로그인에 성공하면 플래그를 획득할 수 있습�
 플래그 형식은 DH{...} 입니다.
 
 **홈 화면**
-![홈]({{ 'assets\img\cookie.png' | relative_url }})
+![홈]({{ '/assets/img/cookie.png' | relative_url }})
 
 # 문제 풀이
 -------------
 
 개발자모드를 켜서 username의 vaule값을 admin이라고 입력하고 새로고침하면 ,
 
-![cookie2]({{ 'assets\img\cookie_2.png' | relative_url }})
+![cookie2]({{ '/assets/img/cookie_2.png' | relative_url }})
 
 바로 admin으로 로그인되며 플래그값을 얻을 수 있다.
 
-![cookie3]({{ 'assets\img\cookie_3.png' | relative_url }})
+![cookie3]({{ '/assets/img/cookie_3.png' | relative_url }})

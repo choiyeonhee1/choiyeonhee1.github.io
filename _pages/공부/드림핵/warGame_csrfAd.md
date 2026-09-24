@@ -11,27 +11,27 @@ CSRF 취약점을 통해 관리자 꼐정의 비밀번호를 변경시키고, �
 
 **홈 화면**
 
-![설명]({{ 'assets\img\csrfAd_0.png' | relative_url }})
+![설명]({{ '/assets/img/csrfAd_0.png' | relative_url }})
 
 
 **change_password page**
 
- ![설명]({{ 'assets\img\csrfAd_1.png' | relative_url }})
+ ![설명]({{ '/assets/img/csrfAd_1.png' | relative_url }})
 
 **login page**
 
-![설명]({{ 'assets\img\csrfAd_2.png' | relative_url }})
+![설명]({{ '/assets/img/csrfAd_2.png' | relative_url }})
 
 **vuln page**
 이용자가 입력한 값 출력함
 
-![설명]({{ 'assets\img\csrfAd_3.png' | relative_url }})
+![설명]({{ '/assets/img/csrfAd_3.png' | relative_url }})
 
 
 **flag page**
 전달된 URL에 임의 이용자가 접속하게 함.
 
-![설명]({{ 'assets\img\csrfAd_4.png' | relative_url }})
+![설명]({{ '/assets/img/csrfAd_4.png' | relative_url }})
 
 
 # 문제 풀이
@@ -39,17 +39,17 @@ CSRF 취약점을 통해 관리자 꼐정의 비밀번호를 변경시키고, �
 
 먼저 vuln 페이지 코드를 보면 ,
 
-![설명]({{ 'assets\img\csrfAd_5.png' | relative_url }})
+![설명]({{ '/assets/img/csrfAd_5.png' | relative_url }})
 
 frame, script, on 키워드를 필터링을 한다. 하지만 &lt; 나 다른 키워드나 태그들은 사용 할 수 있어 csrf 공격이 가능하다.
 
 다음으로 flag 페이지 코드를 살펴보면
 
-![설명]({{ 'assets\img\csrfAd_6.png' | relative_url }})
+![설명]({{ '/assets/img/csrfAd_6.png' | relative_url }})
 
-![설명]({{ 'assets\img\csrfAd_7.png' | relative_url }})
+![설명]({{ '/assets/img/csrfAd_7.png' | relative_url }})
 
-![설명]({{ 'assets\img\csrfAd_8.png' | relative_url }})
+![설명]({{ '/assets/img/csrfAd_8.png' | relative_url }})
 
 ```
 driver.find_element(by=By.NAME, value= "password" ).send_keys(users[ "admin" ])
@@ -59,7 +59,7 @@ read_url 함수는 셀레늄을 이용해 먼저 서버 코드 내부에 저장�
 
 login 페이지 코드에서,
 
-![설명]({{ 'assets\img\csrfAd_9.png' | relative_url }})
+![설명]({{ '/assets/img/csrfAd_9.png' | relative_url }})
 
 token 구성요소는 이용자 아이디와 IP주소이다.
 
@@ -77,11 +77,11 @@ print(csrf_token)
 
 파이썬으로 돌려보면
 
-![설명]({{ 'assets\img\csrfAd_10.png' | relative_url }})
+![설명]({{ '/assets/img/csrfAd_10.png' | relative_url }})
 
 이를 가지고 flag 페이지에 들어가서
 
-![설명]({{ 'assets\img\csrfAd_11.png' | relative_url }})
+![설명]({{ '/assets/img/csrfAd_11.png' | relative_url }})
 
 ```
 <img src="/change_password?pw=admin">
@@ -90,8 +90,8 @@ print(csrf_token)
 
 login 페이지에 들어가 아이디 admin, 비밀번호 dreamhack을 입력하고 로그인하면
 
-![설명]({{ 'assets\img\csrfAd_12.png' | relative_url }})
+![설명]({{ '/assets/img/csrfAd_12.png' | relative_url }})
 
 화면에 flag값이 출력된다.
 
-![설명]({{ 'assets\img\csrfAd_13.png' | relative_url }})
+![설명]({{ '/assets/img/csrfAd_13.png' | relative_url }})

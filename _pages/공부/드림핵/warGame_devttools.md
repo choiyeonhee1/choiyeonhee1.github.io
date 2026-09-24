@@ -17,6 +17,6 @@ bookmark :  true
 
 개발자모드를 실행하여 ctrl+shift+f를 실행하여 모든 파일에 대해서 DH라는 단어가 있는지 검색한다.
 
-![devtools]({{ 'assets\img\devtools.png' | relative_url }})
+![devtools]({{ '/assets/img/devtools.png' | relative_url }})
 
 css파일에 주석 처리가 되어있는것 확인. 바로 플래그값을 얻었다.

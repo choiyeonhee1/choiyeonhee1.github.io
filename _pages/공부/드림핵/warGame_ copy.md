@@ -12,7 +12,7 @@ SQL INJECTION 취약점을 통해 플래그를 획득하세요. 플래그는 fla
 
 **홈 화면**
 
-![설명]({{ 'assets\img\simple_sql_0.png' | relative_url }})
+![설명]({{ '/assets/img/simple_sql_0.png' | relative_url }})
 
 **login page 코드**
 ```
@@ -113,10 +113,10 @@ userid는 알고 있으니 비밀번호 검증을 무력화 하는 방법을 써
 아이디 입력창에 admin" -- 을 입력하게되면 비밀번호 검증 부분은 주석처리가 되어서 userid 값만 일치해도 정보를 불러오게 된다.
 
 
-![설명]({{ 'assets\img\simple_sql_1.png' | relative_url }})
+![설명]({{ '/assets/img/simple_sql_1.png' | relative_url }})
 
 pw칸엔 아무거나 넣고 로그인을 하게되면,
 
-![설명]({{ 'assets\img\simple_sql_2.png' | relative_url }})
+![설명]({{ '/assets/img/simple_sql_2.png' | relative_url }})
 
 flag값이 나온다.

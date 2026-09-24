@@ -17,7 +17,7 @@ bookmark :  true
 --------------
 main.py의 코드 일부분이다.
 
-![설명]({{ 'assets\img\fileAd_1.png' | relative_url }})
+![설명]({{ '/assets/img/fileAd_1.png' | relative_url }})
 
 /file 엔드포인트에서는 path 파라미터를 통해 ./files/경로로부터 파일을 읽어오는 역할을 한다. 하지만 path 파라미터에 대한 필터링이 존재하지 않아 Path Traversal 취약점이 발생하고 임의 경로 파일을 다운로드 할 수 있다.
 
@@ -31,14 +31,14 @@ API_KEY는 환경변수로부터 읽어온다.
 
 /file?path=../../../../../proc/self/environ 을 입력하면
 
-![설명]({{ 'assets\img\fileAd_2.png' | relative_url }})
+![설명]({{ '/assets/img/fileAd_2.png' | relative_url }})
 
 API_KEY 값이 나온다.
 
 얻은 키 값을 이용하여 /admin 엔드포인트에 접근해 임의 명령어를 실행할 수 있다.
 API_KEY 파라미터에 획득한 값을 넣고, cmd 파라미터에 모든 파일 목록을 보여주는 명령어를 입력하면,
 
-![설명]({{ 'assets\img\fileAd_3.png' | relative_url }})
+![설명]({{ '/assets/img/fileAd_3.png' | relative_url }})
 
 이렇게 파일 목록들이 전부 뜬다.
 
@@ -46,7 +46,7 @@ flag 파일을 보면 x권한만 존재하기 때문에 플래그 파일을 실�
 
 cmd 파라미터에 /flag를 입력하면 ,
 
-![설명]({{ 'assets\img\fileAd_4.png' | relative_url }})
+![설명]({{ '/assets/img/fileAd_4.png' | relative_url }})
 
 
 flag 값이 나온다!

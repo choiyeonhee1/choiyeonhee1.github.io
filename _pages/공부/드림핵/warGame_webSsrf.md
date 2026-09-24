@@ -12,7 +12,7 @@ flask로 작성된 image viewer 서비스 입니다.
 SSRF 취약점을 이용해 플래그를 획득하세요. 플래그는 /app/flag.txt에 있습니다.
 
 **홈 화면**
-![설명]({{ 'assets\img\ssrf1_0.png' | relative_url }})
+![설명]({{ '/assets/img/ssrf1_0.png' | relative_url }})
 
 
 
@@ -74,17 +74,17 @@ localhost를 대문자로 작성하거나 127.0.0.1을 16진수 또는 10진수�
 
 나는 Localhost로 변경시켜 img viewer에 http://Localhost:8000 을 입력해보았다.
 
-![설명]({{ 'assets\img\ssrf1_1.png' | relative_url }})
+![설명]({{ '/assets/img/ssrf1_1.png' | relative_url }})
 
 입력하니까 깨진 이미지가 나오는데, f12을 켜서 코드를 확인해보니
 
-![설명]({{ 'assets\img\ssrf1_2.png' | relative_url }})
+![설명]({{ '/assets/img/ssrf1_2.png' | relative_url }})
 
 이렇게 인코딩이 되어있다.
 
 base64에서 디코딩을 해보니까
 
-![설명]({{ 'assets\img\ssrf1_3.png' | relative_url }})
+![설명]({{ '/assets/img/ssrf1_3.png' | relative_url }})
 
 역시 html코드를 인코딩해놓은것이다. 따라서 이 url은 로컬호스트를 가리키면서 우회가 가능한 주소이다.
 
@@ -132,29 +132,29 @@ if __name__ == "__main__":
 
 사이트 주소는http://host8.dreamhack.games:22879/img_viewer 이다.
 
-![설명]({{ 'assets\img\ssrf1_4.png' | relative_url }})
+![설명]({{ '/assets/img/ssrf1_4.png' | relative_url }})
 
 터미널에 python ssrf_exercise.py 22879를 치고 엔터를 누르면,
 
-![설명]({{ 'assets\img\ssrf1_5.png' | relative_url }})
+![설명]({{ '/assets/img/ssrf1_5.png' | relative_url }})
 
 이렇게 포트 넘버가 나왔다.
 
-![설명]({{ 'assets\img\ssrf1_6.png' | relative_url }})
+![설명]({{ '/assets/img/ssrf1_6.png' | relative_url }})
 
 
 포트넘버를 대입하고, 플래그가 flag.txt에 있으니까 이렇게 작성해주고 view를 누르면
 
-![설명]({{ 'assets\img\ssrf1_7.png' | relative_url }})
+![설명]({{ '/assets/img/ssrf1_7.png' | relative_url }})
 
 이렇게 깨진 이미지가 나온다.
 
 개발자모드를 들어가 이미지 코드를 보면 인코딩이 되어있다.
 
-![설명]({{ 'assets\img\ssrf1_8.png' | relative_url }})
+![설명]({{ '/assets/img/ssrf1_8.png' | relative_url }})
 
 base64d에서 디코딩을 해보면,
 
-![설명]({{ 'assets\img\ssrf1_9.png' | relative_url }})
+![설명]({{ '/assets/img/ssrf1_9.png' | relative_url }})
 
 플래그 값이 나온다~!

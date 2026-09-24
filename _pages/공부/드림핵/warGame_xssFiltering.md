@@ -11,22 +11,22 @@ XSS 취약점을 통해 임의 이용자의 쿠키를 탈취해보자
 
 **홈 화면**
 
-![설명]({{ 'assets\img\xssFilter_0.png' | relative_url }})
+![설명]({{ '/assets/img/xssFilter_0.png' | relative_url }})
 
 **vuln page**
 이용자가 입력한 값 출력
 
-![설명]({{ 'assets\img\xssFilter_1.png' | relative_url }})
+![설명]({{ '/assets/img/xssFilter_1.png' | relative_url }})
 
 **memo page**
 이용자가 메모를 남길 수 있으며, 작성한 메모를 출력함
 
-![설명]({{ 'assets\img\xssFilter_2.png' | relative_url }})
+![설명]({{ '/assets/img/xssFilter_2.png' | relative_url }})
 
 **flag page**
 전달된 URL에 임의 이용자가 접속하게끔 함.
 
-![설명]({{ 'assets\img\xssFilter_3.png' | relative_url }})
+![설명]({{ '/assets/img/xssFilter_3.png' | relative_url }})
 
 
 
@@ -98,8 +98,8 @@ flag 페이지로 들어가서 이 코드를 입력한다.
 
 그러면 good이 뜨고,
 
-![설명]({{ 'assets\img\xssFilter_4.png' | relative_url }})
+![설명]({{ '/assets/img/xssFilter_4.png' | relative_url }})
 
 memo 페이지를 들어가면 flag값이 출력된다.
 
-![설명]({{ 'assets\img\xssFilter_5.png' | relative_url }})
+![설명]({{ '/assets/img/xssFilter_5.png' | relative_url }})
